@@ -2,7 +2,7 @@
 
 App per inviare al medico la richiesta di rinnovo ricette, via **WhatsApp**, **SMS** o **Email**, nel formato esatto atteso dallo studio medico.
 
-Funziona su **iPhone e Android** direttamente dal browser, senza installazione. Può essere aggiunta alla schermata Home come un'app normale.
+Funziona su **iPhone e Android**: si installa sulla schermata Home come un'app normale, senza passare dall'App Store o dal Play Store.
 
 ## Utilizzo
 
