@@ -42,7 +42,7 @@ Nella schermata **Impostazioni** si configurano:
 - **Metodo di invio**: WhatsApp, SMS o Email
 - **Modello messaggio**: testo personalizzabile con segnaposto (vedi sotto)
 - **Lista farmaci**: nome, quantità (confezioni) e selezione di default
-- **Import da testo**: incolla una lista farmaci (es. dalla risposta del medico) per aggiornare la lista in un colpo solo
+- **Import da testo**: incolla una richiesta precedente per aggiornare la lista in un colpo solo
 
 ### Modello messaggio
 
