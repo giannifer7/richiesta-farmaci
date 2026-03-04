@@ -12,9 +12,9 @@ Scansiona il QR code con il telefono o apri direttamente il link:
 
 **[giannifer7.github.io/richiesta-farmaci](https://giannifer7.github.io/richiesta-farmaci/)**
 
-### Aggiungere alla schermata Home (opzionale)
+### Aggiungere alla schermata Home (consigliato)
 
-Per usarla come un'app vera e propria, senza barra del browser:
+Per il miglior utilizzo, aggiungi l'app alla schermata Home: si avvierà a schermo intero come un'app nativa, senza barra del browser.
 
 - **iPhone (Safari):** tasto Condividi → *Aggiungi a schermata Home*
 - **Android (Chrome):** menu ⋮ → *Aggiungi a schermata Home* (o il banner che appare automaticamente)
