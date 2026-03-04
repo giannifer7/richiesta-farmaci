@@ -74,7 +74,7 @@ Ogni farmaco è su una riga. Il prefisso `[x]` indica selezione di default, `[ ]
 
 ### Formato import
 
-La sezione *Importa da testo* accetta sia il formato riga per riga (con o senza prefissi) che il formato della risposta del medico:
+La sezione *Importa da testo* accetta sia il formato riga per riga (con o senza prefissi) che il formato accettato dal medico (ad es. una richiesta precedente):
 
 ```
 Farmaci: COGNOME Nome, 2 x Farmaco A, 1 x Farmaco B
