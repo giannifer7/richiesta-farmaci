@@ -6,9 +6,15 @@ Funziona su **iPhone e Android** direttamente dal browser, senza installazione. 
 
 ## Utilizzo
 
-**Apri nel browser:** [giannifer7.github.io/richiesta-farmaci](https://giannifer7.github.io/richiesta-farmaci/)
+Scansiona il QR code con il telefono o apri direttamente il link:
+
+![QR code](qr-pwa.png)
+
+**[giannifer7.github.io/richiesta-farmaci](https://giannifer7.github.io/richiesta-farmaci/)**
 
 ### Aggiungere alla schermata Home (opzionale)
+
+Per usarla come un'app vera e propria, senza barra del browser:
 
 - **iPhone (Safari):** tasto Condividi → *Aggiungi a schermata Home*
 - **Android (Chrome):** menu ⋮ → *Aggiungi a schermata Home* (o il banner che appare automaticamente)
