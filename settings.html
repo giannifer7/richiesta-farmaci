@@ -63,33 +63,6 @@
     <button class="btn btn-primary" id="btnSave">SALVA</button>
 </div>
 
-<script src="app.js"></script>
-<script>
-    const p = getPrefs();
-    document.getElementById('firstName').value   = p.patient_firstname;
-    document.getElementById('lastName').value    = p.patient_lastname;
-    document.getElementById('fiscalCode').value  = p.fiscal_code;
-    document.getElementById('doctorPhone').value = p.doctor_phone;
-    document.getElementById('doctorEmail').value = p.doctor_email;
-    document.getElementById('template').value    = p.message_template || DEFAULT_TEMPLATE;
-
-    const method = p.send_method || 'whatsapp';
-    document.querySelector('input[name=sendMethod][value="' + method + '"]').checked = true;
-
-    document.getElementById('btnReset').addEventListener('click', () => {
-        document.getElementById('template').value = DEFAULT_TEMPLATE;
-    });
-
-    document.getElementById('btnSave').addEventListener('click', () => {
-        localStorage.setItem('patient_firstname',  document.getElementById('firstName').value.trim());
-        localStorage.setItem('patient_lastname',   document.getElementById('lastName').value.trim());
-        localStorage.setItem('fiscal_code',        document.getElementById('fiscalCode').value.trim().toUpperCase());
-        localStorage.setItem('doctor_phone',       document.getElementById('doctorPhone').value.trim());
-        localStorage.setItem('doctor_email',       document.getElementById('doctorEmail').value.trim());
-        localStorage.setItem('send_method',        document.querySelector('input[name=sendMethod]:checked').value);
-        localStorage.setItem('message_template',   document.getElementById('template').value);
-        window.location.href = 'index.html';
-    });
-</script>
+<script src="settings.js"></script>
 </body>
 </html>

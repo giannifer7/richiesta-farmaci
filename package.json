@@ -1,0 +1,26 @@
+{
+  "name": "richiesta-farmaci-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "esbuild src/index.ts src/settings.ts src/medicines.ts --bundle --format=iife --outdir=. && esbuild src/sw.ts --bundle --format=iife --outfile=sw.js",
+    "watch": "esbuild src/index.ts src/settings.ts src/medicines.ts --bundle --format=iife --outdir=. --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giannifer7/richiesta-farmaci.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/giannifer7/richiesta-farmaci/issues"
+  },
+  "homepage": "https://github.com/giannifer7/richiesta-farmaci#readme",
+  "devDependencies": {
+    "esbuild": "^0.27.3",
+    "typescript": "^5.9.3"
+  }
+}

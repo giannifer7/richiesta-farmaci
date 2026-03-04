@@ -40,25 +40,6 @@
     <button class="btn btn-primary" id="btnSave">SALVA</button>
 </div>
 
-<script src="app.js"></script>
-<script>
-    document.getElementById('medicinesText').value = getMedicinesText();
-
-    document.getElementById('btnImport').addEventListener('click', () => {
-        const text = document.getElementById('importText').value.trim();
-        if (!text) return;
-        const entries = parseImportText(text);
-        if (!entries.length) return;
-        const lines = entries.map(({ entry, isDefault }) =>
-            (isDefault ? '[x] ' : '[ ] ') + entry).join('\n');
-        document.getElementById('medicinesText').value = lines;
-        document.getElementById('importText').value = '';
-    });
-
-    document.getElementById('btnSave').addEventListener('click', () => {
-        localStorage.setItem('medicines_text', document.getElementById('medicinesText').value);
-        window.location.href = 'settings.html';
-    });
-</script>
+<script src="medicines.js"></script>
 </body>
 </html>
