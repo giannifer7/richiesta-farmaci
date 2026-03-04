@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "esbuild src/index.ts src/settings.ts src/medicines.ts --bundle --format=iife --outdir=. && esbuild src/sw.ts --bundle --format=iife --outfile=sw.js",
-    "watch": "esbuild src/index.ts src/settings.ts src/medicines.ts --bundle --format=iife --outdir=. --watch"
+    "build": "rm -rf dist && mkdir dist && esbuild src/index.ts src/settings.ts src/medicines.ts --bundle --format=iife --outdir=dist && esbuild src/sw.ts --bundle --format=iife --outfile=dist/sw.js && cp index.html settings.html medicines.html style.css manifest.json icon-192.png icon-512.png qr-pwa.png screenshot.png .nojekyll dist/",
+    "watch": "npm run build && esbuild src/index.ts src/settings.ts src/medicines.ts --bundle --format=iife --outdir=dist --watch"
   },
   "repository": {
     "type": "git",
