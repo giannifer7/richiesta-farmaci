@@ -59,6 +59,8 @@ document.getElementById('btnSend')!.addEventListener('click', () => {
         `?subject=${encodeURIComponent('Richiesta farmaci')}` +
         `&body=${encodeURIComponent(message)}`;
       break;
+    default:
+      alert('Metodo di invio non riconosciuto. Vai in Impostazioni.');
   }
 
   localStorage.setItem('last_request_ms', Date.now().toString());

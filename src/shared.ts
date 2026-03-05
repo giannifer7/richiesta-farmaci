@@ -15,6 +15,14 @@ export interface Prefs {
   message_template:  string | null;
 }
 
+const VALID_SEND_METHODS: ReadonlyArray<Prefs['send_method']> = ['whatsapp', 'sms', 'email'];
+
+function parseSendMethod(raw: string | null): Prefs['send_method'] {
+  return VALID_SEND_METHODS.includes(raw as Prefs['send_method'])
+    ? (raw as Prefs['send_method'])
+    : 'whatsapp';
+}
+
 export function getPrefs(): Prefs {
   return {
     patient_firstname: localStorage.getItem('patient_firstname')  ?? '',
@@ -22,7 +30,7 @@ export function getPrefs(): Prefs {
     fiscal_code:       localStorage.getItem('fiscal_code')        ?? '',
     doctor_phone:      localStorage.getItem('doctor_phone')       ?? '',
     doctor_email:      localStorage.getItem('doctor_email')       ?? '',
-    send_method:      (localStorage.getItem('send_method') ?? 'whatsapp') as Prefs['send_method'],
+    send_method:       parseSendMethod(localStorage.getItem('send_method')),
     message_template:  localStorage.getItem('message_template'),
   };
 }
@@ -81,7 +89,7 @@ export function applyTemplate(
   fiscalCode: string,
   selectedMeds: string[],
 ): string {
-  const listaRegex = /\{lista\("([^"]*)",\s*([^)]*)\)\}/g;
+  const listaRegex = /\{lista\("([^"]*)",\s*([\s\S]*?)\)\}/g;
   let result = template.replace(listaRegex, (_, rawSep: string, itemTpl: string) => {
     const sep = rawSep.replace(/\\n/g, '\n').replace(/\\t/g, '\t').replace(/\\\\/g, '\\');
     return selectedMeds.map(med => {
